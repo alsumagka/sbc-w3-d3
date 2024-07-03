@@ -1,0 +1,1 @@
+SELECT concat(a.fName, ' ', a.Mname, ' ', a.lName) as FullName, b.requestedDate, b.requestedQty, b.requestedAmount from tbl_customer_info a LEFT join tbl_rents_info b on a.id = b.tbl_customer_info_id where b.id is null;

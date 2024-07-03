@@ -1,0 +1,1 @@
+select concat(a.fName, ' ', a.mName, ' ', a.lName) as fullName, sum(c.requestedQty) as requestedQty, b.title AS Title, MONTHNAME(c.requestedDate)as Month, YEAR(c.requestedDate) as YEAR from tbl_customer_info a, tbl_movie_info b JOIN tbl_rents_info c where a.id = c.tbl_customer_info_id and b.id = c.tbl_movie_info_id group by fullName, b.title;
